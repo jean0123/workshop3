@@ -20,13 +20,6 @@ app.use(morgan('dev'));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 
-/* // API ENDPOINTS
-app.get('/api/users', (req, res) => {
-    db.user.findAll().then(users => res.json(users))
-});
-app.post('/api/auth/signin', controller.signin);
- */
-
 app.use('/api', apiRouter);
 
 app.set('PORT', process.env.PORT || 3000);
